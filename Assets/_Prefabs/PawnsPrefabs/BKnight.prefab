@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 7572574696722104142}
   - component: {fileID: 3379752240776064711}
   - component: {fileID: 1380611056840508876}
-  m_Layer: 0
+  - component: {fileID: 2963243195620065519}
+  m_Layer: 7
   m_Name: BKnight
-  m_TagString: Untagged
+  m_TagString: Pawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0, g: 0.85711694, b: 1, a: 1}
   m_FlipX: 0
@@ -99,6 +100,56 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pawnSO: {fileID: 11400000, guid: 7ff1cbbf028574848be0a2966a6fe875, type: 2}
+  targetAreaHighlight: {fileID: 2736506967902840365, guid: e303eea96addd3a4481d10a385c9b166, type: 3}
+  checkerRadius: 0.3
+  areaMask:
+    serializedVersion: 2
+    m_Bits: 64
+--- !u!61 &2963243195620065519
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3471935918667517919}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &8934537325994950319
 GameObject:
   m_ObjectHideFlags: 0
@@ -109,7 +160,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2842642171328609757}
   - component: {fileID: 293216544933828146}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Letter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,7 +222,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 40518461, guid: de6e02eca96b3d747871275a2208f065, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

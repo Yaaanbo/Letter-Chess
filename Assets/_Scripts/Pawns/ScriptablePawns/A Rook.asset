@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: A Rook
   m_EditorClassIdentifier: 
   pawnType: 0
+  pawnName: A Rook
   pawnLetterSprite: {fileID: -996947852, guid: de6e02eca96b3d747871275a2208f065, type: 3}
   pawnBackgroundColor: {r: 0.9607844, g: 0.7294118, b: 0, a: 1}
   pawnScore: 5
   pawnPrefab: {fileID: 8981106191832119988, guid: 6ff31ada817dedd4f8016c5b6e24390d, type: 3}
+  fourStackParticle: {fileID: 7003992591069087109, guid: a36e07ee69d852d429bbf801b361e177, type: 3}

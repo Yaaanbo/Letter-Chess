@@ -99,10 +99,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d950a819a0b9844fb47faa66a88d757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseColor: {r: 0, g: 0, b: 0, a: 1}
-  offsetColor: {r: 1, g: 1, b: 1, a: 1}
+  baseColor: {r: 0.43921572, g: 0.63529414, b: 0.63529414, a: 1}
+  offsetColor: {r: 0.69803923, g: 0.8941177, b: 0.72156864, a: 1}
   spriteRenderer: {fileID: 6520034194167791397}
   highlight: {fileID: 8554778411339035580}
+  pawnDetectorRadius: 0.3
+  pawnMask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!61 &-8600484772521919636
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -220,7 +224,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.24528301, g: 0.244126, b: 0.244126, a: 0.5019608}
   m_FlipX: 0

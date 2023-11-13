@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: C Bishop
   m_EditorClassIdentifier: 
   pawnType: 2
+  pawnName: C Bishop
   pawnLetterSprite: {fileID: 549747591, guid: de6e02eca96b3d747871275a2208f065, type: 3}
   pawnBackgroundColor: {r: 0.9607844, g: 0.21960786, b: 0.8235295, a: 1}
   pawnScore: 12
   pawnPrefab: {fileID: 8813162396261806450, guid: 0b93009d844a7354da21dc64c9878cef, type: 3}
+  fourStackParticle: {fileID: 7003992591069087109, guid: a36e07ee69d852d429bbf801b361e177, type: 3}

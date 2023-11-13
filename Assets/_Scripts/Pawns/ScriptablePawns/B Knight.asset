@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: B Knight
   m_EditorClassIdentifier: 
   pawnType: 1
+  pawnName: B Knight
   pawnLetterSprite: {fileID: 40518461, guid: de6e02eca96b3d747871275a2208f065, type: 3}
   pawnBackgroundColor: {r: 0, g: 0.8588236, b: 1, a: 1}
   pawnScore: 10
   pawnPrefab: {fileID: 3471935918667517919, guid: 5e0d5f12ad7893440810c41d19e6f00d, type: 3}
+  fourStackParticle: {fileID: 7003992591069087109, guid: a36e07ee69d852d429bbf801b361e177, type: 3}

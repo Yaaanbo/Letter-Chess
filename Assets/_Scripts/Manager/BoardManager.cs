@@ -4,14 +4,31 @@ using UnityEngine;
 
 public class BoardManager : MonoBehaviour
 {
+    public static BoardManager instace { get; set; }
+
+    [Header("Board Info")]
     [SerializeField] private int width;
+    public int GetWidth { get { return width; } }
+
     [SerializeField] private int height;
+    public int GetHeight { get { return height; } }
 
     [SerializeField] private BoardTiles tilesPrefab;
     [SerializeField] private Transform tilesParent;
-    [SerializeField] private Transform cam;
 
+    [Header("Cam position")]
+    [SerializeField] private Transform cam;
     [SerializeField] private Vector3 cameraOffset;
+
+
+    private void Awake()
+    {
+        if (instace == null)
+            instace = this;
+        else
+            Destroy(this);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
