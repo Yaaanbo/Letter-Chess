@@ -33,9 +33,6 @@ public class PawnsBehaviour : MonoBehaviour
             GameManager.singleton.RemovePawnFromList(this.gameObject);
             GameManager.singleton.ReverseQueue();
 
-            //Play Wrong Placement Audio
-            AudioManager.singleton.PlaySfx(1);
-
             Destroy(this.gameObject, .2f);
         }
         else

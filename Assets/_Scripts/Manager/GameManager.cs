@@ -137,6 +137,9 @@ public class GameManager : MonoBehaviour
         currentTime = initialTime;
         OnLivesUpdate?.Invoke(lives);
 
+        //Play Wrong Placement Audio
+        AudioManager.singleton.PlaySfx(1);
+
         if (_isTimeOut)
         {
             queuedPawnsList.Remove(selectedPawn);
@@ -144,9 +147,6 @@ public class GameManager : MonoBehaviour
             //Change queue parent position
             var parentPos = queueParentViewport.anchoredPosition;
             queueParentViewport.anchoredPosition = new Vector3(parentPos.x, parentPos.y - spacing);
-
-            //Play Time Out SFX
-            AudioManager.singleton.PlaySfx(1);
 
             GenerateQueue();
         }
@@ -165,7 +165,7 @@ public class GameManager : MonoBehaviour
 
     public void SpawnPawnOnBoard(Vector3 _pos)
     {
-        if(Time.timeScale == 1)
+        if(Time.timeScale == 1 && currentTime >= 0)
         {
             var pawns = Instantiate(selectedPawn.pawnPrefab, _pos, Quaternion.identity);
             pawns.name = $"{pawns.GetComponent<PawnsBehaviour>().GetPawnSO.pawnType}";
