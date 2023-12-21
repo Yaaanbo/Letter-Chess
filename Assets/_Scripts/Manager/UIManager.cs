@@ -29,7 +29,19 @@ public class UIManager : MonoBehaviour
     private void OnEnable()
     {
         gameManager.OnTimerUpdate += OnTimerUIUpdated;
-        gameManager.OnLivesUpdate += OnLivesUpdated;
+        gameManager.OnLivesUpdate += (int _lives) =>
+        {
+            if (_lives >= 0)
+                livesImage[_lives].gameObject.SetActive(false);
+            else
+            {
+                _lives = 0;
+                for (int i = 0; i < livesImage.Length; i++)
+                {
+                    livesImage[i].gameObject.SetActive(false);
+                }
+            }
+        };
         gameManager.OnScoreUpdate += OnScoreUpdated;
         gameManager.OnGameOver += OnGameOver;
     }
@@ -37,7 +49,19 @@ public class UIManager : MonoBehaviour
     private void OnDisable()
     {
         gameManager.OnTimerUpdate -= OnTimerUIUpdated;
-        gameManager.OnLivesUpdate -= OnLivesUpdated;
+        gameManager.OnLivesUpdate -= (int _lives) =>
+        {
+            if (_lives > 0)
+                livesImage[_lives].gameObject.SetActive(false);
+            else
+            {
+                _lives = 0;
+                for (int i = 0; i < livesImage.Length; i++)
+                {
+                    livesImage[i].gameObject.SetActive(false);
+                }
+            }
+        };
         gameManager.OnScoreUpdate -= OnScoreUpdated;
         gameManager.OnGameOver -= OnGameOver;
     }
